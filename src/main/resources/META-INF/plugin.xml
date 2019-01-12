@@ -10,9 +10,9 @@
     </extensions>
 
     <actions>
-        <group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="Myplugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
+        <group id="MyPlugin.SampleMenu" text="DocUpload" description="">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <action id="Myplugin.Textboxes" class="HelloAction" text="Upload text do Drive" description="Says hello"/>
         </group>
     </actions>
 
