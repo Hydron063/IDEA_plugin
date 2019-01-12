@@ -1,22 +1,29 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-}
-
 plugins {
-    id "org.jetbrains.intellij" version "0.3.4"
+    id 'org.jetbrains.intellij' version '0.3.4'
 }
 
-apply plugin: 'idea'
-apply plugin: 'org.jetbrains.intellij'
+group 'Kachur'
+version '1.0-SNAPSHOT'
+
 apply plugin: 'java'
 
-intellij {
-    version 'IC-2016.3' //IntelliJ IDEA 2016.3 dependency; for a full list of IntelliJ IDEA releases please see https://www.jetbrains.com/intellij-repository/releases
-    plugins 'coverage' //Bundled plugin dependencies
-    pluginName 'plugin_name_goes_here'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
 }
 
-group 'org.jetbrains'
-version '1.2' // Plugin version
+dependencies {
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-drive:v3-rev136-1.25.0'
+}
+
+intellij {
+    version 'IC-2016.3'
+}
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
